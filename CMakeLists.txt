@@ -617,6 +617,14 @@ if(BUNDLED_GLEW)
 endif(BUNDLED_GLEW)
 
 #-----------------------------------------------------------------
+# Add bundled WGLEXT header file
+#-----------------------------------------------------------------
+if(BUNDLED_WGLEXT)
+	include(${CMAKE_CURRENT_LIST_DIR}/wglext/CMakeLists.txt)
+	set(BUNDLED_WGLEXT_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/wglext/include")
+endif(BUNDLED_WGLEXT)
+
+#-----------------------------------------------------------------
 # Build bundled SQLITE3 library
 #-----------------------------------------------------------------
 if(BUNDLED_SQLITE3)
